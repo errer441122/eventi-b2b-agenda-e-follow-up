@@ -1,53 +1,39 @@
-# Chi ricontattare dopo un webinar B2B?
+# Dopo il webinar del partner: chi richiama Sales?
 
-Il giorno dopo un webinar, Sales chiede a chi proporre una demo e il team eventi deve spedire i materiali. Il file delle iscrizioni registra anche chi ha annullato. Il registro degli ingressi conta due volte chi si è riconnesso. Il CRM conserva le preferenze email e il nome del commerciale che segue il contatto. Quale lista consegneresti ai due team?
+Un partner organizza un webinar B2B. La mattina dopo manda al team marketing le iscrizioni e il registro degli ingressi. Il commerciale chiede «Chi ha chiesto una demo?». La collega che ha gestito l’evento chiede «A chi mando le slide?». Il partner conosce le presenze. Il CRM dell’azienda contiene il permesso per il follow-up e il commerciale che segue ciascun contatto.
 
-Questo **caso di studio simulato di Marketing Operations** mette a confronto i tre export in Excel. Per ogni ticket restituisce una decisione, un destinatario interno e il motivo. Tutti i nomi, gli indirizzi e gli eventi sono di esempio.
+**Il lavoro di Marketing Ops è consegnare due liste diverse.** Nel caso simulato, dai **17 ingressi registrati** emergono **3 richieste di demo da affidare a Sales** e **2 persone a cui inviare i materiali**. Una persona può entrare due volte, chiedere soltanto le slide oppure aver revocato il permesso. Trattare ogni ingresso come una richiesta commerciale produrrebbe errori già nel primo invio.
 
-**[Scarica il file Excel](riconciliazione-evento.xlsx?raw=true)** · [Lista per Sales e Marketing](liste/follow-up.csv) · [Coda di revisione](liste/revisione.csv) · [Esclusioni](liste/esclusi.csv)
-
-![Foglio Follow-up con 19 pratiche, i destinatari interni e le motivazioni](assets/anteprima.png)
-
-## Risultato del caso
-
-Gli export contengono **18 righe di iscrizione, 17 ingressi e 16 record CRM**. La riconciliazione produce **19 pratiche**. Un ticket presente in più fonti conta una volta. Un ingresso senza iscrizione apre comunque una pratica. Una riga priva di ticket riceve un riferimento provvisorio, così resta visibile a chi deve verificarla. Il conteggio misura pratiche, anche quando l'identità della persona è ancora incerta.
-
-| Destinazione | Pratiche | Azione |
-| --- | ---: | --- |
-| Sales | 3 | Due richieste di demo passano al commerciale già assegnato. Una va nella coda Sales. |
-| Marketing | 2 | Il team eventi prepara i materiali richiesti. |
-| Revisione | 11 | CRM Ops verifica identità, iscrizione o permesso prima di qualsiasi contatto. |
-| Escluso | 3 | Il team lascia fuori un assente, un contatto che ha cancellato senza partecipare e un contatto che ha revocato il permesso. |
-
-## Tre ticket da seguire
-
-| Ticket | Cosa mostrano le fonti | Decisione |
+| Chi apre il file | Cosa riceve | Esempio dal caso |
 | --- | --- | --- |
-| **T-0015 · Pia** | Si registra una volta, accede alle 10:24 e rientra alle 10:26 con lo stesso indirizzo. Ha chiesto i materiali e il CRM conferma il permesso. | Una sola riga al team eventi. Un invio per accesso avrebbe duplicato il messaggio. |
-| **T-0006 · Fabio** | Il registro riporta un ingresso alle 10:06. L'iscrizione risulta annullata alle 10:54. | Revisione. Gli orari spiegano come possano essere vere entrambe le fonti. Il team eventi verifica se rimane valida la richiesta di demo. |
-| **T-0016 · Rico** | Due righe d'iscrizione portano lo stesso ticket e due email diverse. Al check-in ne compare una sola. | Revisione. Prima di passare il caso a Sales, CRM Ops deve verificare l'indirizzo corretto con l'organizzatore. |
+| **Responsabile Sales** | [3 richieste di demo](liste/demo-per-sales.csv), ciascuna con ID CRM, commerciale o coda e prossima azione | Ada ha richiesto una demo ed è già seguita da Sara Neri. Sara apre il contatto C-001 e le propone due orari. |
+| **Team eventi** | [2 destinatari dei materiali](liste/materiali-da-inviare.csv) | Pia si è collegata due volte. Riceve le slide una volta sola. Clara ha già un commerciale, ma ha chiesto solo i materiali. |
+| **CRM Ops** | [11 pratiche da verificare](liste/revisione.csv), ognuna con il controllo da fare | Giada si è registrata con un indirizzo e collegata con un altro. Il team chiede conferma al partner prima di usare l’uno o l’altro. |
 
-## Come funziona
+**[Apri la cartella Excel e prova a cambiare un permesso](riconciliazione-evento.xlsx?raw=true)** · [Tre export di partenza](dati/) · [3 esclusioni motivate](liste/esclusi.csv)
 
-1. **Riunire le tracce dell'evento.** Il ticket collega iscrizioni e ingressi. Spazi esterni e maiuscole delle email vengono normalizzati. Il nome serve a leggere il caso. Un nome uguale, da solo, non autorizza a unire due persone.
-2. **Controllare l'identità.** Ticket mancante o malformato, più iscrizioni sullo stesso ticket, email discordanti, un indirizzo condiviso fra ticket diversi o più record CRM con la stessa email richiedono revisione. Il controllo degli indirizzi intercetta errori elementari e non verifica l'esistenza di una casella.
-3. **Controllare presenza e permesso.** La politica scelta per il webinar limita questa campagna ai presenti con permesso email confermato nel CRM. Una revoca esclude il contatto identificato con certezza. Un'iscrizione annullata con un accesso va verificata. Un assente o un annullato senza accessi resta fuori dalla campagna. Per un presente, un record CRM mancante o un permesso sconosciuto richiedono revisione.
-4. **Consegnare la lista.** Le richieste di demo passano al commerciale esistente, oppure alla coda Sales. Chi ha chiesto solo i materiali passa al team eventi. La cartella Excel calcola le liste localmente. Invio email, importazione nel CRM e aggiornamento dei permessi restano attività esterne.
+![Lista operativa con richieste, responsabili, record CRM e prossima azione](assets/anteprima.png)
 
-HubSpot consente già di importare i partecipanti a un evento usando l'email come identificativo. Qui la decisione viene prima dell'importazione, per esempio quando una persona compare con due indirizzi o un annullamento arriva dopo il check-in. I CSV di uscita sono liste di lavoro per i team. [Documentazione HubSpot sull'importazione dei partecipanti](https://knowledge.hubspot.com/integrations/import-marketing-event-participants)
+## Dove servirebbe davvero
 
-## Demo in due minuti
+Il caso riguarda un **evento occasionale gestito da un partner**. L’azienda riceve file, ha un proprio CRM e deve approvare il follow-up prima di contattare i partecipanti. Il ticket condiviso fra iscrizioni e accessi è il requisito per l’abbinamento. L’email mette poi in relazione il partecipante con il CRM.
 
-1. Apri il foglio **Follow-up** e filtra la colonna **Esito** su **Sales**. Il ticket **T-0001** passa a **Sara Neri**, il commerciale assegnato nel CRM. Annota il totale Sales, poi rimuovi il filtro.
-2. Nel foglio **CRM**, cambia il permesso di Ada in **C6** da **Confermato** a **Revocato**. Torna a **Follow-up**. Il ticket passa a **Escluso**, il motivo diventa **Permesso revocato** e i casi Sales scendono da **3 a 2**. Ripristina il valore per tornare al caso originale.
-3. Apri **Riscontri** e confronta **T-0007** con **T-0015**. Il primo mostra un accesso con un'altra email. Il secondo mostra due accessi con la stessa email. Spiega perché solo il primo richiede una verifica.
+Per un webinar organizzato direttamente su Zoom con HubSpot già collegato, partirei dalla sincronizzazione nativa di iscrizioni e presenze. HubSpot documenta anche due limiti concreti: alcuni ospiti arrivano senza email e l’iscrizione con un indirizzo secondario non crea l’evento nella cronologia del contatto. Il foglio rende visibili i casi da chiedere all’organizzatore. In Italia, il controllo delle liste di invitati e partecipanti compare anche tra le mansioni di Junior Marketing Automation Analyst di KPMG. [Integrazione ufficiale Zoom–HubSpot](https://knowledge.hubspot.com/integrations/use-hubspot-and-zoom-webinars) · [Ruolo KPMG](https://careers.kpmg.it/job/Milano-Marketing-Junior-Automation-Analyst-Milano/1375576157/)
 
-**Per provare altri dati**, modifica una copia del file. Nei tre fogli sorgente scrivi nelle colonne blu delle righe 6–35, fino a 30 righe per fonte. Per sostituire un export, svuota prima i vecchi valori delle colonne blu, conservando le formule a destra. Il formato dei ticket è `T-` seguito da quattro cifre. I riferimenti `VER-I` e `VER-P` identificano le righe sorgente da controllare nell'export corrente. I [CSV originali](dati/) permettono di ripristinare il caso. I CSV in [liste/](liste/) fotografano l'esempio pubblicato. Dopo una modifica, filtra il foglio **Follow-up** e copia le sole righe visibili per ottenere una nuova lista.
+## Segui tre decisioni nel file
 
-## Cosa puoi dimostrare in colloquio
+1. **Due accessi, un solo invio.** Nel registro, Pia (T-0015) entra alle 10:24 e rientra alle 10:26 con lo stesso indirizzo. Nelle iscrizioni la richiesta è *Materiali*. Il CRM conferma il permesso. Al team eventi arriva una riga.
+2. **Una demo che richiede una telefonata interna prima del contatto.** Fabio (T-0006) entra alle 10:06 e annulla alle 10:54. Entrambe le fonti possono essere corrette. CRM Ops chiede al team eventi se la richiesta di demo è ancora valida.
+3. **Una richiesta che esce dalla lista Sales.** Apri una copia di Excel. Nel foglio *CRM* cambia il permesso di Ada, cella C6, da *Confermato* a *Revocato*. In *Follow-up* le demo scendono da 3 a 2, il motivo diventa *Permesso revocato* e il record scompare dalla selezione filtrata su Sales dopo aver riapplicato il filtro. Ripristina il valore per ripetere la demo.
 
-- **Perché Excel?** Il team ha tre file piccoli e deve approvare una lista. Chi esamina una decisione può risalire dal motivo ai tre export. Per decidere se automatizzare servirebbero frequenza degli eventi, volumi e tempo effettivamente speso in revisione.
-- **Perché 11 pratiche da rivedere?** Il campione contiene intenzionalmente molti casi difficili per verificare le regole. Quel conteggio misura la copertura del caso di studio. Una stima del carico del team richiederebbe dati di eventi reali.
-- **Come sapresti se il processo aiuta un'azienda?** Su un evento pilota misurerei i minuti necessari a preparare la lista e confronterei le destinazioni suggerite con quelle approvate dal responsabile CRM. In questo esercizio sono verificabili gli esiti delle regole. Tempo risparmiato, conversioni e ricavi richiedono osservazioni sul campo.
+## Come si usa su un altro evento
 
-**Collaudo.** I 19 esiti sono stati controllati rispetto a una lista di risultati attesi. Il file è stato riaperto e ricalcolato in Microsoft Excel. Sono stati verificati i tre CSV di uscita, il filtro, una revoca, la correzione di un'email discordante e l'aggiunta di una pratica nelle tre fonti. Il caso copre un singolo webinar con export finali e un ticket condiviso fra piattaforme.
+In una copia del file, sostituisci i valori delle colonne blu nei fogli *Iscrizioni*, *Presenze* e *CRM*, righe 6–35. Conserva le formule alla loro destra. Il caso gestisce un evento alla volta, fino a 30 righe per fonte, con ticket nel formato `T-0001`. Se il partner e il team non condividono un identificativo, serve prima una corrispondenza verificata. Un nome uguale da solo non basta.
+
+Nel foglio *Follow-up* filtra *Sales* o *Marketing* e copia le sole righe visibili. Il campo **ID CRM** indica il record da aprire e **Prossima azione** dice cosa fare. Per una pratica sospesa, controlla la colonna *Motivo* e risali alle fonti nel foglio *Riscontri*. I CSV su GitHub sono la fotografia del caso pubblicato. Excel ricalcola le decisioni quando cambiano gli input.
+
+## Cosa dimostra la prova
+
+**18 righe di iscrizione, 17 ingressi e 16 record CRM producono 19 pratiche.** Le unità sono diverse. Un ticket trovato in entrambe le fonti evento apre una pratica sola. Un check-in senza iscrizione apre comunque una pratica. Una riga senza ticket rimane riconoscibile tramite un riferimento provvisorio. Gli 11 casi in revisione sono stati inseriti apposta per mettere alla prova gli abbinamenti.
+
+I nomi, gli indirizzi e i risultati appartengono a una simulazione. In Microsoft Excel sono stati verificati i 19 esiti, i destinatari, gli ID CRM, le azioni, la revoca del permesso, la correzione di un indirizzo e l’aggiunta di una pratica. Per misurare il valore economico servirebbe un evento pilota: il confronto utile è fra il tempo impiegato dall’operatore e gli errori trovati nelle liste preparate con i due metodi.
