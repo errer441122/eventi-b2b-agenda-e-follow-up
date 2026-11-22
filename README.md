@@ -1,55 +1,42 @@
-# Organizzare appuntamenti e follow-up negli eventi B2B
+# Eventi B2B in Excel: appuntamenti allo stand e follow-up
 
-Due esempi pratici in Excel per chi lavora agli eventi: gestire un cambio di orario mentre lo stand è aperto e consegnare ai colleghi le richieste ricevute dopo un webinar. I dati di entrambi gli esempi sono simulati.
+Due fogli Excel per chi lavora agli eventi. Si aprono e si provano in un paio di minuti, senza macro. **I dati sono simulati.**
 
-## Un cambio di appuntamento al desk di una fiera
+## 1. Allo stand: un gruppo chiede di cambiare orario
 
-Sono le **09:45**. Un gruppo di tre persone, già prenotato per le 10:00, chiede di entrare alle 10:30. In quel turno restano **due posti**. Cosa può promettere chi è al desk, e chi deve essere avvisato se il gruppo accetta un altro orario?
-
-**[Apri il foglio Excel per il desk](fiera/agenda-demo.xlsx?raw=true)** · [Prova il cambio in 90 secondi](fiera/README.md#prova-il-cambio-in-90-secondi) · [Vai al caso post-evento](#dopo-il-webinar-del-partner-chi-richiama-sales)
+Sono le 09:45. Tre persone prenotate per le 10:00 chiedono di entrare alle 10:30, ma in quel turno restano due posti.
 
 ![Esempio simulato. Il gruppo mantiene la visita delle 10:00 e il desk può proporre le 11:00, quando sono disponibili tre posti.](fiera/cambio-turno.png)
 
-Il foglio propone le **11:00**. Finché il gruppo valuta la proposta, mantiene i tre posti alle 10:00. Se accetta, l’operatore aggiorna l’agenda una volta e vede chi deve ancora ricevere il nuovo orario. Chi subentra al desk può riprendere da quell’avviso.
+Il foglio dice a chi è al desk tre cose:
 
-Lo stesso metodo si può provare per una visita in showroom o una dimostrazione durante un open day. Bastano l’agenda della giornata, i posti disponibili per turno e il nome di chi accoglie ciascun gruppo.
+- **Cosa proporre.** Il primo turno con posto per tutto il gruppo e un referente presente: qui le 11:00.
+- **Cosa non toccare.** Finché il gruppo non accetta, i suoi tre posti delle 10:00 restano occupati.
+- **Chi avvisare.** Dopo il sì, l’agenda mostra se manca ancora il visitatore, il referente della sala o entrambi. Chi subentra al desk riparte da lì.
 
-## Dopo il webinar del partner: chi richiama Sales?
+**[Scarica il foglio](fiera/agenda-demo.xlsx?raw=true)** · [Provalo in 90 secondi](fiera/README.md#prova-il-cambio-in-90-secondi)
 
-Un partner organizza un webinar B2B. La mattina dopo manda al team marketing le iscrizioni e il registro degli ingressi. Il commerciale chiede «Chi ha chiesto una demo?». La collega che ha gestito l’evento chiede «A chi mando le slide?». Il partner conosce le presenze. Il CRM dell’azienda contiene il permesso per il follow-up e il commerciale che segue ciascun contatto.
+Lo stesso metodo vale per una visita in showroom o una dimostrazione durante un open day.
 
-**Il lavoro di Marketing Ops è consegnare due liste diverse.** Nel caso simulato, dai **17 ingressi registrati** emergono **3 richieste di demo da affidare a Sales** e **2 persone a cui inviare i materiali**. Una persona può entrare due volte, chiedere soltanto le slide oppure aver revocato il permesso. Trattare ogni ingresso come una richiesta commerciale produrrebbe errori già nel primo invio.
+## 2. Dopo l’evento: a chi passa ogni richiesta
 
-| Chi apre il file | Cosa riceve | Esempio dal caso |
+La mattina dopo un webinar arrivano l’elenco degli iscritti e il registro degli ingressi. Non ogni ingresso è una richiesta commerciale: c’è chi entra due volte, chi vuole solo le slide e chi ha revocato il permesso a essere contattato.
+
+Il foglio incrocia iscrizioni, presenze e CRM e divide 19 pratiche in quattro liste pronte da consegnare:
+
+| Lista | A chi va | Righe |
 | --- | --- | --- |
-| **Responsabile Sales** | [3 richieste di demo](liste/demo-per-sales.csv), ciascuna con ID CRM, commerciale o coda e prossima azione | Ada ha richiesto una demo ed è già seguita da Sara Neri. Sara apre il contatto C-001 e le propone due orari. |
-| **Team eventi** | [2 destinatari dei materiali](liste/materiali-da-inviare.csv) | Pia si è collegata due volte. Riceve le slide una volta sola. Clara ha già un commerciale, ma ha chiesto solo i materiali. |
-| **CRM Ops** | [11 pratiche da verificare](liste/revisione.csv), ognuna con il controllo da fare | Giada si è registrata con un indirizzo e collegata con un altro. Il team chiede conferma al partner prima di usare l’uno o l’altro. |
-
-**[Apri la cartella Excel e prova a cambiare un permesso](riconciliazione-evento.xlsx?raw=true)** · [Tre export di partenza](dati/) · [3 esclusioni motivate](liste/esclusi.csv)
+| [Demo da fissare](liste/demo-per-sales.csv) | Commerciali: chi richiama e cosa proporre | 3 |
+| [Materiali da inviare](liste/materiali-da-inviare.csv) | Team eventi | 2 |
+| [Da verificare](liste/revisione.csv) | Chi gestisce il CRM, con il controllo da fare | 11 |
+| [Esclusi](liste/esclusi.csv) | Nessuno, con il motivo | 3 |
 
 ![Lista operativa con richieste, responsabili, record CRM e prossima azione](assets/anteprima.png)
 
-## Dove servirebbe davvero
+**[Scarica il foglio](riconciliazione-evento.xlsx?raw=true)** · [Come leggerlo e riusarlo](post-evento.md)
 
-Il caso riguarda un **evento occasionale gestito da un partner**. L’azienda riceve file, ha un proprio CRM e deve approvare il follow-up prima di contattare i partecipanti. Il ticket condiviso fra iscrizioni e accessi è il requisito per l’abbinamento. L’email mette poi in relazione il partecipante con il CRM.
+## Limiti
 
-Quando Zoom e HubSpot sono già collegati, la sincronizzazione può fornire iscrizioni e presenze. Restano da verificare casi come un ospite senza email o un’iscrizione con l’indirizzo secondario del contatto. Il foglio permette di raccoglierli in una lista da consegnare all’organizzatore. [Documentazione dell’integrazione Zoom–HubSpot](https://knowledge.hubspot.com/integrations/use-hubspot-and-zoom-webinars)
-
-## Segui tre decisioni nel file
-
-1. **Due accessi, un solo invio.** Nel registro, Pia (T-0015) entra alle 10:24 e rientra alle 10:26 con lo stesso indirizzo. Nelle iscrizioni la richiesta è *Materiali*. Il CRM conferma il permesso. Al team eventi arriva una riga.
-2. **Una demo che richiede una telefonata interna prima del contatto.** Fabio (T-0006) entra alle 10:06 e annulla alle 10:54. Entrambe le fonti possono essere corrette. CRM Ops chiede al team eventi se la richiesta di demo è ancora valida.
-3. **Una richiesta che esce dalla lista Sales.** Apri una copia di Excel. Nel foglio *CRM* cambia il permesso di Ada, cella C6, da *Confermato* a *Revocato*. In *Follow-up* le demo scendono da 3 a 2, il motivo diventa *Permesso revocato* e il record scompare dalla selezione filtrata su Sales dopo aver riapplicato il filtro. Ripristina il valore per ripetere la demo.
-
-## Come si usa su un altro evento
-
-In una copia del file, sostituisci i valori delle colonne blu nei fogli *Iscrizioni*, *Presenze* e *CRM*, righe 6–35. Conserva le formule alla loro destra. Il caso gestisce un evento alla volta, fino a 30 righe per fonte, con ticket nel formato `T-0001`. Se il partner e il team non condividono un identificativo, serve prima una corrispondenza verificata. Un nome uguale da solo non basta.
-
-Nel foglio *Follow-up* filtra *Sales* o *Marketing* e copia le sole righe visibili. Il campo **ID CRM** indica il record da aprire e **Prossima azione** dice cosa fare. Per una pratica sospesa, controlla la colonna *Motivo* e risali alle fonti nel foglio *Riscontri*. I CSV su GitHub sono la fotografia del caso pubblicato. Excel ricalcola le decisioni quando cambiano gli input.
-
-## Cosa dimostra la prova
-
-**18 righe di iscrizione, 17 ingressi e 16 record CRM producono 19 pratiche.** Le unità sono diverse. Un ticket trovato in entrambe le fonti evento apre una pratica sola. Un check-in senza iscrizione apre comunque una pratica. Una riga senza ticket rimane riconoscibile tramite un riferimento provvisorio. Gli 11 casi in revisione sono stati inseriti apposta per mettere alla prova gli abbinamenti.
-
-I nomi, gli indirizzi e i risultati appartengono a una simulazione. In Microsoft Excel sono stati verificati i 19 esiti, i destinatari, gli ID CRM, le azioni, la revoca del permesso, la correzione di un indirizzo e l’aggiunta di una pratica. Per misurare il valore economico servirebbe un evento pilota: il confronto utile è fra il tempo impiegato dall’operatore e gli errori trovati nelle liste preparate con i due metodi.
+- Nomi, numeri e risultati sono inventati: nessuno dei due fogli è stato usato in un evento reale.
+- Il foglio dello stand copre una sala e una giornata, fino a 12 turni e 40 gruppi. Quello post-evento copre un evento alla volta, fino a 30 righe per fonte.
+- Entrambi sono stati aperti e ricalcolati in Microsoft Excel. Per lo stand c’è uno [script con 30 controlli](fiera/verifica-excel.ps1).
