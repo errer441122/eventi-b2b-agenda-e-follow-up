@@ -1,5 +1,7 @@
 # Il foglio post-evento: come leggerlo e riusarlo
 
+Per ripetere il collaudo su Windows con Excel desktop, scarica il repository e avvia dalla sua cartella `.\verifica-post-evento.ps1` in PowerShell. Lo script apre il foglio in sola lettura, confronta i risultati con i CSV e chiude la sessione senza salvare le modifiche di prova. [Apri lo script](verifica-post-evento.ps1)
+
 Dettagli del [secondo caso](README.md#2-dopo-levento-a-chi-passa-ogni-richiesta). **[Scarica il foglio](riconciliazione-evento.xlsx?raw=true)** · [Tre export di partenza](dati/)
 
 ## Segui tre decisioni nel file

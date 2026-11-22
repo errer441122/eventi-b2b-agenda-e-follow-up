@@ -1,6 +1,6 @@
 # Eventi B2B in Excel: appuntamenti allo stand e follow-up
 
-Due fogli Excel per chi lavora agli eventi. Si aprono e si provano in un paio di minuti, senza macro. **I dati sono simulati.**
+**Questo è un esercizio con dati simulati. La prima prova su un evento reale è ancora da fare.** I due fogli mostrano come terrei aggiornata l’agenda di uno stand e come passerei le richieste ai colleghi dopo un webinar. Si possono provare in Excel in un paio di minuti, senza macro.
 
 ## 1. Allo stand: un gruppo chiede di cambiare orario
 
@@ -35,8 +35,10 @@ Il foglio incrocia iscrizioni, presenze e CRM e divide 19 pratiche in quattro li
 
 **[Scarica il foglio](riconciliazione-evento.xlsx?raw=true)** · [Come leggerlo e riusarlo](post-evento.md)
 
-## Limiti
+## Perimetro e verifica
 
-- Nomi, numeri e risultati sono inventati: nessuno dei due fogli è stato usato in un evento reale.
-- Il foglio dello stand copre una sala e una giornata, fino a 12 turni e 40 gruppi. Quello post-evento copre un evento alla volta, fino a 30 righe per fonte.
-- Entrambi sono stati aperti e ricalcolati in Microsoft Excel. Per lo stand c’è uno [script con 30 controlli](fiera/verifica-excel.ps1).
+- **Stand.** Una sala, una giornata, fino a 12 turni e 40 gruppi. Un operatore alla volta conferma gli spostamenti. [Collaudo del desk](fiera/verifica-excel.ps1)
+- **Post-evento.** Fino a 30 righe per ciascuna delle tre fonti. Il collaudo ricalcola in Excel 19 pratiche, controlla cinque liste CSV e ripete tre modifiche ai dati. [Collaudo del follow-up](verifica-post-evento.ps1)
+- **Pianificazione.** Fornitori, budget, logistica e scadenze generali sono fuori dal perimetro dei due casi. Per un evento da 300 visitatori userei il gestionale eventi per l’agenda condivisa e il CRM per assegnare le richieste. Porterei in quegli strumenti le regole provate qui.
+
+**Una prova su un evento reale.** Con chi ha gestito un evento, riprenderei tre cambi di orario già chiusi, usando dati anonimizzati. Confronterei il turno proposto e gli avvisi rimasti aperti con le decisioni effettive del desk. Per il follow-up, farei verificare a un commerciale la destinazione di un piccolo campione di richieste e annoterei i casi in cui sceglierebbe diversamente.
