@@ -39,6 +39,6 @@ Il foglio incrocia iscrizioni, presenze e CRM e divide 19 pratiche in quattro li
 
 - **Stand.** Una sala, una giornata, fino a 12 turni e 40 gruppi. Un operatore alla volta conferma gli spostamenti. [Collaudo del desk](fiera/verifica-excel.ps1)
 - **Post-evento.** Fino a 30 righe per ciascuna delle tre fonti. Il collaudo ricalcola in Excel 19 pratiche, controlla cinque liste CSV e ripete tre modifiche ai dati. [Collaudo del follow-up](verifica-post-evento.ps1)
-- **Pianificazione.** Fornitori, budget, logistica e scadenze generali sono fuori dal perimetro dei due casi. Per un evento da 300 visitatori userei il gestionale eventi per l’agenda condivisa e il CRM per assegnare le richieste. Porterei in quegli strumenti le regole provate qui.
+- **Pianificazione.** Fornitori, budget, logistica e scadenze generali sono fuori dal perimetro dei due casi.
 
 **Una prova su un evento reale.** Con chi ha gestito un evento, riprenderei tre cambi di orario già chiusi, usando dati anonimizzati. Confronterei il turno proposto e gli avvisi rimasti aperti con le decisioni effettive del desk. Per il follow-up, farei verificare a un commerciale la destinazione di un piccolo campione di richieste e annoterei i casi in cui sceglierebbe diversamente.
