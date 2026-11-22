@@ -1,4 +1,16 @@
-# Dopo il webinar del partner: chi richiama Sales?
+# Un cambio di appuntamento al desk di una fiera
+
+Sono le **09:45**. Un gruppo di tre persone, già prenotato per le 10:00, chiede di entrare alle 10:30. In quel turno restano **due posti**. Cosa può promettere chi è al desk, e chi deve essere avvisato se il gruppo accetta un altro orario?
+
+**[Apri il foglio Excel per il desk](fiera/agenda-demo.xlsx?raw=true)** · [Prova il cambio in 90 secondi](fiera/README.md#prova-il-cambio-in-90-secondi) · [Vai al caso post-evento](#dopo-il-webinar-del-partner-chi-richiama-sales)
+
+![Esempio simulato. Il gruppo mantiene la visita delle 10:00 e il desk può proporre le 11:00, quando sono disponibili tre posti.](fiera/cambio-turno.png)
+
+Il foglio propone le **11:00**. Finché il gruppo valuta la proposta, mantiene i tre posti alle 10:00. Se accetta, l’operatore aggiorna l’agenda una volta e vede chi deve ancora ricevere il nuovo orario. Chi subentra al desk può riprendere da quell’avviso.
+
+**Da dove nasce l’esempio.** Per Interpack 2026 Marchesini Group ha presentato ORBITA-L in un’area descritta come accessibile su invito e appuntamento. La prenotazione è un requisito documentato. Orari, delegazioni, capienza, referenti e richieste di cambio qui sono inventati per provare la decisione. L’applicabilità dipende da come il team gestisce già questi passaggi. [Pagina ufficiale di Interpack di Marchesini Group](https://www.marchesini.com/en/trade-show) · [Comunicato italiano](https://www.marchesini.com/it/news-media/news/marchesini-group-interpack-2026)
+
+## Dopo il webinar del partner: chi richiama Sales?
 
 Un partner organizza un webinar B2B. La mattina dopo manda al team marketing le iscrizioni e il registro degli ingressi. Il commerciale chiede «Chi ha chiesto una demo?». La collega che ha gestito l’evento chiede «A chi mando le slide?». Il partner conosce le presenze. Il CRM dell’azienda contiene il permesso per il follow-up e il commerciale che segue ciascun contatto.
 
