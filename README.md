@@ -1,4 +1,8 @@
-# Un cambio di appuntamento al desk di una fiera
+# Organizzare appuntamenti e follow-up negli eventi B2B
+
+Due esempi pratici in Excel per chi lavora agli eventi: gestire un cambio di orario mentre lo stand è aperto e consegnare ai colleghi le richieste ricevute dopo un webinar. I dati di entrambi gli esempi sono simulati.
+
+## Un cambio di appuntamento al desk di una fiera
 
 Sono le **09:45**. Un gruppo di tre persone, già prenotato per le 10:00, chiede di entrare alle 10:30. In quel turno restano **due posti**. Cosa può promettere chi è al desk, e chi deve essere avvisato se il gruppo accetta un altro orario?
 
@@ -8,7 +12,7 @@ Sono le **09:45**. Un gruppo di tre persone, già prenotato per le 10:00, chiede
 
 Il foglio propone le **11:00**. Finché il gruppo valuta la proposta, mantiene i tre posti alle 10:00. Se accetta, l’operatore aggiorna l’agenda una volta e vede chi deve ancora ricevere il nuovo orario. Chi subentra al desk può riprendere da quell’avviso.
 
-**Da dove nasce l’esempio.** Per Interpack 2026 Marchesini Group ha presentato ORBITA-L in un’area descritta come accessibile su invito e appuntamento. La prenotazione è un requisito documentato. Orari, delegazioni, capienza, referenti e richieste di cambio qui sono inventati per provare la decisione. L’applicabilità dipende da come il team gestisce già questi passaggi. [Pagina ufficiale di Interpack di Marchesini Group](https://www.marchesini.com/en/trade-show) · [Comunicato italiano](https://www.marchesini.com/it/news-media/news/marchesini-group-interpack-2026)
+Lo stesso metodo si può provare per una visita in showroom o una dimostrazione durante un open day. Bastano l’agenda della giornata, i posti disponibili per turno e il nome di chi accoglie ciascun gruppo.
 
 ## Dopo il webinar del partner: chi richiama Sales?
 
@@ -30,7 +34,7 @@ Un partner organizza un webinar B2B. La mattina dopo manda al team marketing le 
 
 Il caso riguarda un **evento occasionale gestito da un partner**. L’azienda riceve file, ha un proprio CRM e deve approvare il follow-up prima di contattare i partecipanti. Il ticket condiviso fra iscrizioni e accessi è il requisito per l’abbinamento. L’email mette poi in relazione il partecipante con il CRM.
 
-Per un webinar organizzato direttamente su Zoom con HubSpot già collegato, partirei dalla sincronizzazione nativa di iscrizioni e presenze. HubSpot documenta anche due limiti concreti: alcuni ospiti arrivano senza email e l’iscrizione con un indirizzo secondario non crea l’evento nella cronologia del contatto. Il foglio rende visibili i casi da chiedere all’organizzatore. In Italia, il controllo delle liste di invitati e partecipanti compare anche tra le mansioni di Junior Marketing Automation Analyst di KPMG. [Integrazione ufficiale Zoom–HubSpot](https://knowledge.hubspot.com/integrations/use-hubspot-and-zoom-webinars) · [Ruolo KPMG](https://careers.kpmg.it/job/Milano-Marketing-Junior-Automation-Analyst-Milano/1375576157/)
+Quando Zoom e HubSpot sono già collegati, la sincronizzazione può fornire iscrizioni e presenze. Restano da verificare casi come un ospite senza email o un’iscrizione con l’indirizzo secondario del contatto. Il foglio permette di raccoglierli in una lista da consegnare all’organizzatore. [Documentazione dell’integrazione Zoom–HubSpot](https://knowledge.hubspot.com/integrations/use-hubspot-and-zoom-webinars)
 
 ## Segui tre decisioni nel file
 

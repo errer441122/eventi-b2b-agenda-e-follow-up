@@ -23,11 +23,11 @@ Se il visitatore rifiuta la proposta al passo 2, puoi chiudere la richiesta lasc
 
 Il caso copre **una sala, una giornata, fino a 12 turni e 40 delegazioni**, con un solo operatore che conferma modifiche alla volta. Conserva il codice, l’orario e il referente dei turni già comunicati. Per sostituire una sessione crea un nuovo turno e riprogramma le delegazioni. Il foglio segnala eventuali incoerenze inserite a mano, anche una sovracapienza. Le formule forniscono un controllo operativo, mentre l’ammissione all’area rimane responsabilità del personale incaricato.
 
-## Quando varrebbe la pena usarlo
+## Quando usarlo
 
-La pagina ufficiale di Interpack documenta una presentazione su invito e appuntamento. La frequenza degli spostamenti, le difficoltà al banco e gli strumenti già in uso al team restano da verificare. Il caso è indipendente e simulato. [Fonte Marchesini Group](https://www.marchesini.com/en/trade-show)
+Il foglio è pensato per un desk con una sola agenda e un operatore alla volta. Il beneficio è concreto quando due colleghi si danno il cambio: chi arriva può vedere che il visitatore ha già ricevuto il nuovo orario e che resta da avvisare il referente della sala.
 
-Una domanda da fare a chi ha gestito l’ultima fiera è **«Quando un cliente cambia orario mentre lo stand è aperto, dove vedono il cambiamento sia l’accoglienza sia il referente della demo?»** Se l’agenda in uso aggiorna già entrambi, la scelta più semplice è usare quella. Se il passaggio avviene a voce o fra elenchi separati, si può provare l’esempio con un operatore, usando tre casi anonimi: gruppo troppo numeroso, turno sospeso e cambio con un avviso ancora da dare. Confrontare il tempo per trovare un’alternativa e gli avvisi rimasti aperti nei due metodi darebbe una prima misura dell’utilità effettiva.
+Per valutarlo su un evento, si possono ripercorrere tre situazioni con il personale del desk: un gruppo troppo numeroso, un turno sospeso e un cambio con un avviso ancora da dare. Il confronto con l’agenda già in uso riguarda due cose osservabili: il tempo necessario per trovare un’alternativa e la possibilità di riconoscere, al cambio turno, chi aspetta ancora una comunicazione.
 
 ## Verifica
 
