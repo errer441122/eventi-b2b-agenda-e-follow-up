@@ -1,6 +1,6 @@
 # Eventi B2B in Excel: appuntamenti allo stand e follow-up
 
-**Questo è un esercizio con dati simulati. La prima prova su un evento reale è ancora da fare.** I due fogli mostrano come terrei aggiornata l’agenda di uno stand e come passerei le richieste ai colleghi dopo un webinar. Si possono provare in Excel in un paio di minuti, senza macro.
+**Questo è un esercizio con dati simulati. La prima prova su un evento reale è ancora da fare.** I due fogli mostrano come terrei aggiornata l’agenda di uno stand e come passerei le richieste ai colleghi dopo un evento in sede o una fiera. Si possono provare in Excel in un paio di minuti, senza macro.
 
 ## 1. Allo stand: un gruppo chiede di cambiare orario
 
@@ -10,9 +10,9 @@ Sono le 09:45. Tre persone prenotate per le 10:00 chiedono di entrare alle 10:30
 
 Il foglio dice a chi è al desk tre cose:
 
-- **Cosa proporre.** Il primo turno con posto per tutto il gruppo e un referente presente: qui le 11:00.
+- **Cosa proporre.** Il primo turno con posto per tutto il gruppo e un referente presente, nella stessa area e giornata: qui le 11:00.
 - **Cosa non toccare.** Finché il gruppo non accetta, i suoi tre posti delle 10:00 restano occupati.
-- **Chi avvisare.** Dopo il sì, l’agenda mostra se manca ancora il visitatore, il referente della sala o entrambi. Chi subentra al desk riparte da lì.
+- **Chi avvisare.** Dopo il sì, l’agenda mostra se manca ancora il visitatore, il referente della sala o entrambi. Se poi un turno slitta o cambia referente, i gruppi interessati tornano da avvisare. Chi subentra al desk riparte da lì.
 
 **[Scarica il foglio](fiera/agenda-demo.xlsx?raw=true)** · [Provalo in 90 secondi](fiera/README.md#prova-il-cambio-in-90-secondi)
 
@@ -20,16 +20,18 @@ Lo stesso metodo vale per una visita in showroom o una dimostrazione durante un 
 
 ## 2. Dopo l’evento: a chi passa ogni richiesta
 
-La mattina dopo un webinar arrivano l’elenco degli iscritti e il registro degli ingressi. Non ogni ingresso è una richiesta commerciale: c’è chi entra due volte, chi vuole solo le slide e chi ha revocato il permesso a essere contattato.
+Dopo un evento arrivano l’elenco degli iscritti, il registro degli ingressi e i contatti raccolti allo stand. Non ogni nome è una richiesta commerciale: c’è chi entra due volte, chi vuole solo le slide e chi non ha dato il permesso a essere contattato.
 
-Il foglio incrocia iscrizioni, presenze e CRM e divide 19 pratiche in quattro liste pronte da consegnare:
+Il foglio incrocia questi elenchi con il CRM e divide 26 pratiche in quattro liste pronte da consegnare:
 
 | Lista | A chi va | Righe |
 | --- | --- | --- |
-| [Demo da fissare](liste/demo-per-sales.csv) | Commerciali: chi richiama e cosa proporre | 3 |
+| [Richieste per Sales](liste/richieste-per-sales.csv) | Commerciali: demo, offerte e visite, con chi richiama | 7 |
 | [Materiali da inviare](liste/materiali-da-inviare.csv) | Team eventi | 2 |
-| [Da verificare](liste/revisione.csv) | Chi gestisce il CRM, con il controllo da fare | 11 |
-| [Esclusi](liste/esclusi.csv) | Nessuno, con il motivo | 3 |
+| [Da verificare](liste/revisione.csv) | Chi gestisce il CRM, con il controllo da fare | 13 |
+| [Esclusi](liste/esclusi.csv) | Nessuno, con il motivo | 4 |
+
+Un contatto nuovo raccolto allo stand, con il consenso, va al commerciale del suo paese con l’indicazione di crearlo nel CRM. Categorie di richiesta, commerciali per paese e diciture del permesso stanno nella scheda **Regole**: si cambiano lì, senza toccare le formule.
 
 ![Lista operativa con richieste, responsabili, record CRM e prossima azione](assets/anteprima.png)
 
@@ -37,8 +39,8 @@ Il foglio incrocia iscrizioni, presenze e CRM e divide 19 pratiche in quattro li
 
 ## Perimetro e verifica
 
-- **Stand.** Una sala, una giornata, fino a 12 turni e 40 gruppi. Un operatore alla volta conferma gli spostamenti. [Collaudo del desk](fiera/verifica-excel.ps1)
-- **Post-evento.** Fino a 30 righe per ciascuna delle tre fonti. Il collaudo ricalcola in Excel 19 pratiche, controlla cinque liste CSV e ripete tre modifiche ai dati. [Collaudo del follow-up](verifica-post-evento.ps1)
-- **Pianificazione.** Fornitori, budget, logistica e scadenze generali sono fuori dal perimetro dei due casi.
+- **Stand.** Più giorni e più aree, fino a 150 turni e 300 gruppi. Un operatore alla volta conferma gli spostamenti. [Collaudo del desk](fiera/verifica-excel.ps1): 62 controlli.
+- **Post-evento.** Fino a 500 iscrizioni o contatti, 500 ingressi e 5.000 contatti CRM. Il collaudo ricalcola 26 pratiche, controlla cinque liste CSV e ripete sette modifiche ai dati. [Collaudo del follow-up](verifica-post-evento.ps1)
+- **Fuori dai fogli.** Due postazioni che modificano insieme la stessa agenda, l’invio delle email e l’aggiornamento del CRM: i fogli preparano le liste, non le spediscono. Fornitori, budget e logistica sono fuori dal perimetro dei due casi.
 
 **Una prova su un evento reale.** Con chi ha gestito un evento, riprenderei tre cambi di orario già chiusi, usando dati anonimizzati. Confronterei il turno proposto e gli avvisi rimasti aperti con le decisioni effettive del desk. Per il follow-up, farei verificare a un commerciale la destinazione di un piccolo campione di richieste e annoterei i casi in cui sceglierebbe diversamente.

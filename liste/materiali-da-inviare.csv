@@ -1,3 +1,3 @@
-﻿"Ticket","Email di riferimento","Esito","A chi passa","Motivo","ID CRM","Prossima azione"
-"T-0003","clara@example.org","Marketing","Team eventi","Materiali richiesti","C-003","Inviare slide e registrazione richieste."
-"T-0015","pia@example.org","Marketing","Team eventi","Materiali richiesti","C-014","Inviare slide e registrazione richieste."
+﻿"Ticket","Email di riferimento","Esito","A chi passa","Motivo","ID CRM","Azienda","Paese","Prossima azione"
+"T-0003","clara@example.org","Marketing","Team eventi","Richiesta materiali","C-003","Azienda Gamma","Italia","Inviare slide e registrazione richieste."
+"T-0015","pia@example.org","Marketing","Team eventi","Richiesta materiali","C-014","Azienda Xi","Austria","Inviare slide e registrazione richieste."

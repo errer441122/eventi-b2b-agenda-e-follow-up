@@ -1,0 +1,8 @@
+﻿"Ticket","Email di riferimento","Esito","A chi passa","Motivo","ID CRM","Azienda","Paese","Prossima azione"
+"T-0001","ada@example.org","Sales","Sara Neri","Richiesta demo","C-001","Azienda Alfa","Italia","Proporre due orari per la demo."
+"T-0002","bruno@example.org","Sales","Paola Gatti","Richiesta demo","C-002","Azienda Beta","Spagna","Proporre due orari per la demo."
+"T-0011","marta@example.org","Sales","Elio Riva","Richiesta demo","C-011","Azienda Lambda","Germania","Proporre due orari per la demo."
+"INT-0101","klaus@example.org","Sales","Elio Riva","Richiesta offerta · nuovo contatto","Da creare","Azienda Rho","Germania","Creare il contatto nel CRM. Preparare l’offerta richiesta."
+"INT-0102","lucia@example.org","Sales","Paola Gatti","Richiesta demo · nuovo contatto","Da creare","Azienda Sigma","Spagna","Creare il contatto nel CRM. Proporre due orari per la demo."
+"INT-0104","joana@example.org","Sales","Coda Sales","Richiesta offerta · nuovo contatto","Da creare","Azienda Upsilon","Brasile","Creare il contatto nel CRM. Assegnare un commerciale. Preparare l’offerta richiesta."
+"INT-0106","solo.crm@example.org","Sales","Sara Neri","Richiesta visita in sede","C-016","Azienda Chi","Italia","Concordare una data per la visita in sede."
