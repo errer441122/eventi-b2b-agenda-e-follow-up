@@ -17,13 +17,15 @@ In una copia del file, sostituisci i valori nei fogli *Iscrizioni*, *Presenze* e
 
 Nella scheda *Regole* si adattano le categorie di richiesta con la lista e l’azione di ciascuna, i commerciali per paese, le diciture del permesso usate dal CRM e cosa fare con gli iscritti che non si sono presentati. Una richiesta o una dicitura che non è nelle Regole va in verifica, non a un commerciale.
 
+Per un contatto raccolto allo stand, un rifiuto esplicito e un permesso confermato in CRM generano **Permessi in conflitto**. Chi gestisce il CRM sospende il follow-up e verifica la preferenza più recente. Se il campo allo stand è vuoto, per i contatti esistenti resta valida la preferenza registrata nel CRM. Una revoca in CRM esclude il contatto dalla lista. Se manca l’ID di un record CRM già trovato, la richiesta in uscita va in revisione per recuperare l’identificativo.
+
 Nel foglio *Follow-up* filtra *Sales* o *Marketing* e copia le sole righe visibili. Il campo **ID CRM** indica il record da aprire, o *Da creare*, e **Prossima azione** dice cosa fare. Per una pratica sospesa, controlla la colonna *Motivo* e risali alle fonti nel foglio *Riscontri*. I CSV su GitHub sono la fotografia del caso pubblicato. Excel ricalcola le decisioni quando cambiano gli input.
 
 ## Cosa dimostra la prova
 
 **25 righe di iscrizione o contatto, 17 ingressi e 16 record CRM producono 26 pratiche.** Le unità sono diverse. Un ticket trovato in entrambe le fonti evento apre una pratica sola. Un check-in senza iscrizione apre comunque una pratica. Una riga senza ticket rimane riconoscibile tramite un riferimento provvisorio. I 13 casi da verificare sono stati inseriti apposta per mettere alla prova gli abbinamenti.
 
-I nomi, gli indirizzi e i risultati appartengono a una simulazione. In Microsoft Excel sono stati verificati i 26 esiti, i destinatari, gli ID CRM, le azioni e sette modifiche: la revoca di un permesso, la correzione di un indirizzo, gli assenti mandati al team eventi, una nuova categoria di richiesta, una nuova dicitura del permesso, un paese senza commerciale e l’aggiunta di una pratica. Per misurare il valore economico servirebbe un evento pilota: il confronto utile è fra il tempo impiegato dall’operatore e gli errori trovati nelle liste preparate con i due metodi.
+I nomi, gli indirizzi e i risultati appartengono a una simulazione. In Microsoft Excel sono stati verificati i 26 esiti, i destinatari, gli ID CRM, le azioni e le modifiche ai dati e alle regole. Il collaudo include la revoca, il conflitto fra stand e CRM e un record CRM privo di ID. Per misurare il valore economico servirebbe un evento pilota che confronti il tempo impiegato e gli errori nelle liste preparate con i due metodi.
 
 ## Dove servirebbe davvero
 

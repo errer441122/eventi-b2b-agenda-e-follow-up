@@ -33,6 +33,8 @@ Il foglio incrocia questi elenchi con il CRM e divide 26 pratiche in quattro lis
 
 Un contatto nuovo raccolto allo stand, con il consenso, va al commerciale del suo paese con l’indicazione di crearlo nel CRM. Categorie di richiesta, commerciali per paese e diciture del permesso stanno nella scheda **Regole**: si cambiano lì, senza toccare le formule.
 
+Se un contatto già presente nel CRM rifiuta il follow-up allo stand, una preferenza CRM favorevole apre una revisione. Anche un record CRM con ID mancante passa al team che gestisce i dati prima di essere assegnato.
+
 ![Lista operativa con richieste, responsabili, record CRM e prossima azione](assets/anteprima.png)
 
 **[Scarica il foglio](riconciliazione-evento.xlsx?raw=true)** · [Come leggerlo e riusarlo](post-evento.md)
@@ -40,7 +42,7 @@ Un contatto nuovo raccolto allo stand, con il consenso, va al commerciale del su
 ## Perimetro e verifica
 
 - **Stand.** Più giorni e più aree, fino a 150 turni e 300 gruppi. Un operatore alla volta conferma gli spostamenti. [Collaudo del desk](fiera/verifica-excel.ps1): 62 controlli.
-- **Post-evento.** Fino a 500 iscrizioni o contatti, 500 ingressi e 5.000 contatti CRM. Il collaudo ricalcola 26 pratiche, controlla cinque liste CSV e ripete sette modifiche ai dati. [Collaudo del follow-up](verifica-post-evento.ps1)
+- **Post-evento.** Fino a 500 iscrizioni o contatti, 500 ingressi e 5.000 contatti CRM. Il collaudo ricalcola 26 pratiche, controlla cinque liste CSV e prova modifiche ai dati e alle regole. [Collaudo del follow-up](verifica-post-evento.ps1)
 - **Fuori dai fogli.** Due postazioni che modificano insieme la stessa agenda, l’invio delle email e l’aggiornamento del CRM: i fogli preparano le liste, non le spediscono. Fornitori, budget e logistica sono fuori dal perimetro dei due casi.
 
 **Una prova su un evento reale.** Con chi ha gestito un evento, riprenderei tre cambi di orario già chiusi, usando dati anonimizzati. Confronterei il turno proposto e gli avvisi rimasti aperti con le decisioni effettive del desk. Per il follow-up, farei verificare a un commerciale la destinazione di un piccolo campione di richieste e annoterei i casi in cui sceglierebbe diversamente.

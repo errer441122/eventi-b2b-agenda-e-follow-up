@@ -1,6 +1,8 @@
-﻿$ErrorActionPreference = 'Stop'
+﻿param([string]$WorkbookPath = (Join-Path $PSScriptRoot 'riconciliazione-evento.xlsx'))
+
+$ErrorActionPreference = 'Stop'
 $folder = $PSScriptRoot
-$source = Join-Path $folder 'riconciliazione-evento.xlsx'
+$source = (Resolve-Path -LiteralPath $WorkbookPath).Path
 $app = New-Object -ComObject Excel.Application
 $book = $null
 $checks = 0
@@ -71,6 +73,29 @@ try {
     Check 'Unknown request' (Row 32)[4] 'Richiesta da verificare'
     Check 'Trimmed email' (Row 19)[1] 'marta@example.org'
 
+    # Contatto esistente: il rifiuto espresso allo stand sospende il follow-up.
+    $reg.Range('I29').Value2 = 'No'
+    $conflict = Row 31
+    Check 'Stand refusal conflicts with confirmed CRM' "$($conflict[2])|$($conflict[3])|$($conflict[4])|$($conflict[5])" 'Revisione|CRM Ops|Permessi in conflitto|'
+    Check 'Conflict review action' $conflict[8] 'Sospendere il follow-up e verificare la preferenza più recente.'
+    $reg.Range('I29').Value2 = 'Sì'
+    $crm.Range('C21').Value2 = 'Revocato'
+    $revoked = Row 31
+    Check 'CRM revocation still excludes' "$($revoked[2])|$($revoked[4])" 'Escluso|Permesso revocato'
+    $crm.Range('C21').Value2 = 'Confermato'
+    $reg.Range('I29').ClearContents() | Out-Null
+    Check 'Blank stand answer keeps known CRM permission' (Row 31)[2] 'Sales'
+
+    # Un record esistente senza ID resta da collegare prima di assegnarlo.
+    $crm.Range('A21').ClearContents() | Out-Null
+    $missingId = Row 31
+    Check 'Existing record missing ID' "$($missingId[2])|$($missingId[3])|$($missingId[4])|$($missingId[5])" 'Revisione|CRM Ops|ID CRM mancante|'
+    Check 'Missing ID review action' $missingId[8] "Recuperare l’ID del record CRM prima di assegnare la richiesta."
+    $crm.Range('A21').Value2 = '  '
+    Check 'Whitespace ID goes to review' (Row 31)[4] 'ID CRM mancante'
+    $crm.Range('A21').Value2 = 'C-016'
+    Check 'Restored ID clears review' "$((Row 31)[2])|$((Row 31)[5])" 'Sales|C-016'
+
     # Permesso revocato nel CRM: esce dalla lista Sales
     $crm.Range('C6').Value2 = 'Revocato'
     $ada = Row 9
@@ -88,6 +113,10 @@ try {
     $dario = Row 12
     Check 'Absent to Marketing' "$($dario[2])|$($dario[3])|$($dario[8])" 'Marketing|Team eventi|Inviare la registrazione a chi non ha partecipato.'
     Check 'Cancelled stays out' (Row 13)[2] 'Escluso'
+    $crm.Range('A9').ClearContents() | Out-Null
+    $dario = Row 12
+    Check 'Absent to Marketing without CRM ID goes to review' "$($dario[2])|$($dario[4])" 'Revisione|ID CRM mancante'
+    $crm.Range('A9').Value2 = 'C-004'
     $rules.Range('A28').Value2 = 'Escluso'
 
     # Nuova categoria di richiesta aggiunta nelle Regole
@@ -127,7 +156,7 @@ try {
     $alex = Row 33
     Check 'Append' "$($alex[0])|$($alex[2])|$($alex[3])|$($alex[5])" 'T-0020|Sales|Elio Riva|C-017'
     Check 'Append total' $summary.Range('A6').Text '27'
-    Write-Output "Excel $($app.Version): $checks controlli superati su 26 pratiche, 5 liste CSV e 7 modifiche (revoca, email corretta, assenti, nuova richiesta, nuova dicitura del permesso, paese, nuova pratica)."
+    Write-Output "Excel $($app.Version): $checks controlli superati su 26 pratiche, 5 liste CSV e modifiche dei dati e delle regole."
 } finally {
     if ($null -ne $book) { $book.Close($false) }
     $app.Quit()
