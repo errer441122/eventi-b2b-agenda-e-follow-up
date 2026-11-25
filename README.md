@@ -1,5 +1,10 @@
 # Eventi B2B in Excel: appuntamenti allo stand e follow-up
 
+> **English summary (full README in Italian below):**
+> - **What it is:** Two macro-free Excel workbooks built for B2B trade shows and in-house open days (simulated data, ready to validate on anonymised event records).
+> - **1. Stand appointments (`fiera/agenda-demo.xlsx`):** Proposes the first free slot in the same area/day without dropping the original booking until confirmed, and automatically flags visitors or hosts who still need an update if a slot shifts (62 automated checks).
+> - **2. Post-event follow-up (`riconciliazione-evento.xlsx`):** Reconciles registrations, attendance, booth scans and CRM consents into four ready-to-hand-off lists — *Sales*, *Events/Materials*, *CRM Review* and *Excluded* — with all routing rules editable in a single *Regole* sheet.
+
 **Questo è un esercizio con dati simulati. La prima prova su un evento reale è ancora da fare.** I due fogli mostrano come terrei aggiornata l’agenda di uno stand e come passerei le richieste ai colleghi dopo un evento in sede o una fiera. Si possono provare in Excel in un paio di minuti, senza macro.
 
 ## 1. Allo stand: un gruppo chiede di cambiare orario
